@@ -100,10 +100,8 @@ public class ImageManipulation {
      *  */
     public static void edgeDetection(String pathToFile, int threshold) {
         APImage image = new APImage(pathToFile);
-        int width = image.getWidth();
-        int height = image.getHeight();
-        for(int i = width-1; i > 0; i--){
-            for(int j = height-1; j > 0; j--){
+        for(int i = image.getWidth()-1; i > 0; i--){
+            for(int j = image.getHeight()-1; j > 0; j--){
                 Pixel pixel = image.getPixel(i, j);
                 Pixel pixelLeft = image.getPixel(i-1, j);
                 Pixel pixelDown = image.getPixel(i, j-1);
